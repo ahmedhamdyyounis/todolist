@@ -1,0 +1,448 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-clr:#55A546;
+    --sub-clr:#84b47b;
+    --trans:.3s;
+}
+/* Global Classes */
+body {
+    font-family: "poppins", "sans-serif";
+}
+
+.container {
+    margin-inline: auto;
+    padding: 10px 60px;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: none;
+}
+
+.hero-btn {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: #eee;
+    width: fit-content;
+    cursor: pointer;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+    }
+    }
+    @media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+    }
+    @media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    }
+    @media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    }
+    @media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Start Main Header */
+.main-header {
+    background-color: var(--main-clr);
+    position: fixed;
+    width: 100%;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.main-header .left-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.main-header  ul {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.main-header ul i {
+    color: #eee;
+    font-size: 17px;
+}
+
+.main-header ul li {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.main-header ul li:hover {
+    background-color: var(--sub-clr);
+}
+.main-header form  {
+    background-color: var(--sub-clr);
+    padding: 7px 8px;
+    border-radius: 3px;
+    transition: var(--trans);
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 7px;
+}
+
+.main-header form input::placeholder {
+    font-size: 13px;
+    color: #eee;
+}
+
+.main-header form:hover, 
+.main-header form:hover input {
+    background: white;
+}
+
+.main-header form:hover input::placeholder {
+    color: #333;
+    transition: var(--trans);
+}
+.main-header form input  {
+    background-color: var(--sub-clr);
+    outline: none;
+    border: none;
+    transition: var(--trans);
+    width: 100%;
+
+}
+
+.main-header form:hover i {
+    color: #333;
+}
+
+.main-header form i {
+    color: #eee;
+    transition: var(--trans);
+}
+
+
+.main-header .right-section {
+    display: flex;
+    align-items: center;
+}
+.main-header .profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+/* End Main Header */
+
+
+/* Start App Main Body */
+
+.main-body .container {
+    display: flex;
+}
+
+.main-body {
+    position: relative;
+    top: 60px;
+}
+
+
+/* Start Aside */
+aside {
+    padding: 25px 20px;
+    width: 300px;
+    height: 100vh;
+    background-color: #eee;
+    position: fixed;
+    left: 0;
+    top: 60px;
+}
+
+aside .main-menu ul li {
+    padding: 10px;
+    border-radius: 5px;
+    transition: var(--trans);
+}
+
+aside .main-menu ul li:hover {
+    background-color: #8885853a;
+
+}
+aside .main-menu ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+aside .main-menu ul li a span {
+    margin-left: auto;
+    font-size: 12px;
+}
+
+aside .main-menu ul li a p {
+    font-size: 13px;
+}
+/* End Aside */
+
+
+/* Start Main */
+main {
+    margin-left: 300px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.main-wrapper {
+    overflow: hidden;
+}
+
+.sub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.sub-header .date {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sub-header .date h3 {
+    font-size: 20px;
+}
+
+.sub-header .date p {
+    font-size: 11px;
+    color: #333;
+}
+
+.taskaya {
+    margin-top: 70px;
+}
+
+.current-date  {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.today-section h2 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.add-task {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.add-task p {
+    transition: var(--trans);
+    font-size: 12px;
+    color: #333;
+    font-weight: 300;
+}
+
+.add-task i {
+    border-radius: 100px;
+    font-size: 15px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+}
+
+.add-task:hover p {
+    color: var(--main-clr);
+}
+
+.add-task:hover i {
+    background-color: var(--main-clr);
+    color: white;
+}
+
+.today-section .taskaya {
+    
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+.today-section .taskaya input {
+    border: none;
+    outline: none;
+    display: block;
+    padding: 5px;
+}
+
+.today-section .taskaya input::placeholder {
+    font-size: 15px;
+}
+
+.today-section .filters ul {
+    display: flex;
+    gap: 10px;
+    padding-left: 5px;
+}
+
+.today-section .filters ul li {
+    border: 1px solid #b1aeae ;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 8px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.today-section .filters ul li span {
+    color: rgba(0,0,0,0.56);
+}
+
+.today-section .filters ul li:hover {
+    background-color: #eee;
+}
+
+.today-section .filters ul li i{
+    font-size: 13px;
+}
+
+.today-section .filters ul li span{
+    font-size: 12px;
+}
+
+.today-section .filters ul li:first-child i:first-child {
+    color: var(--main-clr);
+}
+
+.today-section .filters ul li:not(:first-child) i {
+    color: #333;
+}
+.today-section .filters ul li:first-child span {
+    color: var(--main-clr);
+}
+
+.today-section .filters ul li:first-child i:last-child {
+    font-size: 9px;
+    font-weight: 800;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.today-section .filters ul li:first-child i:last-child:hover  {
+    background-color: #b1b1b1;
+}
+
+.btns {
+    margin-top: 10px;
+}
+.right-btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 11px;
+}
+
+.add-btn {
+    background-color: #84b47b;
+    color: white;
+}
+.add-btn:hover {
+    background-color: var(--main-clr);
+}
+
+.cancel-btn:hover {
+    background-color: #cccaca;
+}
+
+/* End App Main Body */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Modified Media Queries */
+
+
+    @media (max-width: 575px) {
+        .main-header form input::placeholder {
+            opacity: 0;
+        }
+
+    }
+    @media (max-width: 767px) {
+    
+
+    }
+    @media (max-width: 991px) {
+    
+
+    }
+    @media (max-width: 1199px) {
+    
+
+}

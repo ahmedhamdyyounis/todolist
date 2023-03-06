@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Css Reset -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Cedarville+Cursive&family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=League+Spartan:wght@300;700&family=Marck+Script&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>To Do List</title>
+</head>
+<body>
+
+    <!-- Start Header  -->
+    <header class="main-header">
+        <div class="container">
+            <div class="left-section">
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-home"></i>
+                        </a>
+                    </li>
+                </ul>
+                <form action="">
+                    <i class="fa-solid fa-search"></i>
+                    <input aria-expanded="false" type="search" name="" id="search-field" placeholder="Search">
+                    <i class="fa-regular fa-circle-question d-none"></i>
+                    <i class="fa-solid fa-x d-none"></i>
+                </form>
+            </div>
+            <div class="right-section">
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-regular fa-circle-question"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-regular fa-bell"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="profile">
+                    <img src="./images/user.jpg" alt="User">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Start Header  -->
+
+    <!-- Start App Body -->
+    <section class="main-body">
+        <div class="container">
+            <aside>
+                <div class="main-menu">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-inbox"></i>
+                                <p>Inbox</p>
+                                <span>5</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-calendar-day"></i>
+                                <p>Today</p>
+                                <span>6</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <p>Upcoming</p>
+                                <span>2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-sliders"></i>
+                                <p>Inbox</p>
+                                <span>5</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <main>
+                <div class="main-wrapper">
+                    <header class="sub-header">
+                        <div class="date">
+                            <h3>Today</h3>
+                            <p>Mon Mar 6</p>
+                        </div>
+                        <div class="adjust">
+                            <i class="fa-solid fa-sliders"></i>
+                            <span>View</span>
+                        </div>
+                    </header>
+                    <div class="task-body">
+                        <div class="task-body-wrapper">
+                            <section class="overdue"></section>
+                            <section class="today-section">
+                                <h2>
+                                    <a href="" class="current-date"></a>
+                                </h2>
+                                <div class="add-task">
+                                    <i class="fa-solid fa-plus"></i>
+                                    <p>Add task</p>
+                                </div>
+                                <div class="taskaya d-none">
+                                    <form action="" id="task-form">
+                                        <input type="text" name="" id="task-name" placeholder="Task name">
+                                        <div contenteditable="true" translate="no" data-typist-editor="true" data-rich-text="true" role="textbox" aria-readonly="false" aria-multiline="true" aria-label="Description" class="ProseMirror" tabindex="0"><p data-placeholder="Description" class="is-empty is-editor-empty"><br class="ProseMirror-trailingBreak"></p></div>
+                                    </form>
+                                    <div class="filters">
+                                        <ul>
+                                            <li>
+                                                <i class="fa-solid fa-calendar-week"></i>
+                                                <span>Today</span>
+                                                <i class="fa-solid fa-x"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fa-regular fa-flag"></i>
+                                                <span>Priority</span>
+                                            </li>
+                                            <li>
+                                                <i class="fa-regular fa-clock"></i>
+                                                <span>Reminders</span>
+                                            </li>
+                                            <li>
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="btns">
+                                        <div class="right-btns">
+                                            <div class="hero-btn cancel-btn">
+                                                Cancel
+                                            </div>
+                                            <div class="hero-btn add-btn">
+                                                Add task
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
