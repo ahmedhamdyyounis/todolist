@@ -23,8 +23,8 @@
         <div class="container">
             <div class="left-section">
                 <ul>
-                    <li>
-                        <a href="">
+                    <li class="bars">
+                        <a>
                             <i class="fa-solid fa-bars"></i>
                         </a>
                     </li>
@@ -70,14 +70,14 @@
     <!-- Start App Body -->
     <section class="main-body">
         <div class="container">
-            <aside>
+            <aside class="menu">
                 <div class="main-menu">
                     <ul>
                         <li>
                             <a href="">
                                 <i class="fa-solid fa-inbox"></i>
                                 <p>Inbox</p>
-                                <span>5</span>
+                                <span class="inbox-num">0</span>
                             </a>
                         </li>
                         <li>
@@ -104,7 +104,7 @@
                     </ul>
                 </div>
             </aside>
-            <main>
+            <main class="task-section">
                 <div class="main-wrapper">
                     <header class="sub-header">
                         <div class="date">
@@ -127,10 +127,11 @@
                                     <i class="fa-solid fa-plus"></i>
                                     <p>Add task</p>
                                 </div>
+                                <div class="all-tasks">
+                                </div>
                                 <div class="taskaya d-none">
                                     <form action="" id="task-form">
                                         <input type="text" name="" id="task-name" placeholder="Task name">
-                                        <div contenteditable="true" translate="no" data-typist-editor="true" data-rich-text="true" role="textbox" aria-readonly="false" aria-multiline="true" aria-label="Description" class="ProseMirror" tabindex="0"><p data-placeholder="Description" class="is-empty is-editor-empty"><br class="ProseMirror-trailingBreak"></p></div>
                                     </form>
                                     <div class="filters">
                                         <ul>
