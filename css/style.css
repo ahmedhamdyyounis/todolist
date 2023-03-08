@@ -133,6 +133,9 @@ a {
     color: #eee;
 }
 
+input[type='search']::-webkit-search-cancel-button {
+    display: none;
+}
 .main-header form:hover, 
 .main-header form:hover input {
     background: white;
@@ -196,6 +199,7 @@ aside {
     position: fixed;
     left: 0;
     top: 60px;
+    transition: 0.3s ease-out;
 }
 
 aside .main-menu ul li {
@@ -232,10 +236,13 @@ main {
     justify-content: center;
     width: 100%;
     position: relative;
+    height: 6000px;
+    transition: 0.3s;
 }
 
 .main-wrapper {
-    overflow: hidden;
+    position: sticky;
+    top: 70px;
 }
 
 .sub-header {
@@ -294,10 +301,13 @@ main {
 .add-task i {
     border-radius: 100px;
     font-size: 15px;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     text-align: center;
     line-height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .add-task:hover p {
@@ -397,6 +407,7 @@ main {
     background-color: #84b47b;
     color: white;
 }
+
 .add-btn:hover {
     background-color: var(--main-clr);
 }
@@ -404,6 +415,91 @@ main {
 .cancel-btn:hover {
     background-color: #cccaca;
 }
+
+.task-list-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    min-height: 40px;
+}
+
+.done-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.done-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 100vh;
+    border: 1px solid #eee;
+    position: relative;
+}
+
+.fa-check {
+    color: #cacaca;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.task-settings {
+    margin-left: auto;
+}
+
+.setting-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.setting-icons i {
+    cursor: pointer;
+    color: #333;
+    padding: 5px 8px;
+    border-radius: 3px;
+    font-size: 18px;
+}
+
+.setting-icons i:hover {
+    background-color: #eee;
+}
+
+.grip-wrapper{
+    position: absolute;
+    left: -25px;
+    top: 3px;
+}
+
+.grip-wrapper i {
+    opacity: 0;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.grip-wrapper:hover i {
+    opacity: 1;
+    background-color: #eee;
+}
+
+.grip-wrapper:hover {
+    cursor: move;
+}
+
+
+.unmargin-left {
+    margin-left: 0;
+}
+
+.left {
+    left: -100%;
+}
+
 
 /* End App Main Body */
 
